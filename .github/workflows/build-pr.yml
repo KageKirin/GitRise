@@ -16,3 +16,14 @@ jobs:
       frameworks: ${{ vars.BUILD_FRAMEWORKS }}
       include: ${{ vars.BUILD_MATRIX }}
     secrets: inherit
+
+
+  pack-nuget:
+    needs:
+    - build
+    uses: kagekirin/gha-py-toolbox/.github/workflows/dotnet-pack-nuget.yml@main
+    with:
+      configurations: ${{ vars.DEPLOY_CONFIGURATIONS }}
+      frameworks: ${{ vars.DEPLOY_FRAMEWORKS }}
+      projects: ${{ vars.DEPLOY_PROJECTS }}
+    secrets: inherit
