@@ -5,6 +5,7 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using KageKirin.Extensions.Configuration.GitConfig;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
@@ -26,7 +27,7 @@ public partial class App : Application
 
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            desktop.MainWindow = new MainWindow();
+            desktop.MainWindow = GlobalHost.Services.GetRequiredService<MainWindow>();
         }
 
         base.OnFrameworkInitializationCompleted();
@@ -60,6 +61,9 @@ public partial class App : Application
         hostBuilder.Logging.AddConsole(); //< add console as logging target
         hostBuilder.Logging.AddDebug(); //< add debug output as logging target
         hostBuilder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace); //< set minimum level to trace in Debug
+
+        //< below: register services to be available in Host
+        hostBuilder.Services.AddTransient<MainWindow>();
 
         //< finally: return
         return hostBuilder;
