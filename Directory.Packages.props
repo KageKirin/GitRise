@@ -1,5 +1,17 @@
 <Project>
 
+  <ItemGroup Label="hosting dependencies">
+    <PackageVersion Include="Microsoft.Extensions.Configuration" Version="9.0.4" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.4" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="9.0.4" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="9.0.4" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.4" />
+    <PackageVersion Include="Microsoft.Extensions.Logging" Version="9.0.4" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Debug" Version="9.0.4" />
+    <PackageVersion Include="Alexinea.Extensions.Configuration.Toml" Version="7.0.0" />
+    <PackageVersion Include="KageKirin.Extensions.Configuration.GitConfig" Version="0.1.0" />
+  </ItemGroup>
+
   <ItemGroup Label="avalonia dependencies">
     <PackageVersion Include="Avalonia" Version="11.2.8" />
     <PackageVersion Include="Avalonia.Desktop" Version="11.2.8" />

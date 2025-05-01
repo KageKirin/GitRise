@@ -18,5 +18,14 @@
       <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
       <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
     </PackageReference>
+
+    <PackageReference Include="Microsoft.Extensions.Hosting"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.Logging" />
+
+    <PackageReference Include="Alexinea.Extensions.Configuration.Toml" />
+    <PackageReference Include="KageKirin.Extensions.Configuration.GitConfig"/>
   </ItemGroup>
 </Project>
