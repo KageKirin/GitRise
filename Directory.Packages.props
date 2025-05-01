@@ -1,0 +1,13 @@
+<Project>
+
+
+  <ItemGroup Label="global package references">
+    <!-- enable reproducible builds -->
+    <GlobalPackageReference Include="DotNet.ReproducibleBuilds" Version="1.2.25" PrivateAssets="All" />
+    <!-- enable source link -->
+    <GlobalPackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+    <!-- enable automatic versioning -->
+    <GlobalPackageReference Include="MinVer" Version="6.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
