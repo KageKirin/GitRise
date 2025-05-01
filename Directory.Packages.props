@@ -1,2 +1,9 @@
 <Project>
+
+
+  <ItemGroup Label="global package references">
+    <!-- enable reproducible builds -->
+    <GlobalPackageReference Include="DotNet.ReproducibleBuilds" Version="1.2.25" PrivateAssets="All" />
+  </ItemGroup>
+
 </Project>
