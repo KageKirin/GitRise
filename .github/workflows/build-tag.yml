@@ -1,0 +1,19 @@
+name: build-tag
+
+on:
+  push:
+    tags:
+      - '*'
+
+concurrency:
+  group: ${{ github.actor_id }}-${{ github.workflow }}-${{ github.ref }}-${{ github.sha }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    uses: kagekirin/gha-py-toolbox/.github/workflows/dotnet-build.yml@main
+    with:
+      configurations: ${{ vars.BUILD_CONFIGURATIONS }}
+      frameworks: ${{ vars.BUILD_FRAMEWORKS }}
+      include: ${{ vars.BUILD_MATRIX }}
+    secrets: inherit
