@@ -52,6 +52,7 @@ public partial class App : Application
         );
         hostBuilder.Configuration.AddGitConfig(path: Environment.CurrentDirectory, optional: false, reloadOnChange: true);
         hostBuilder.Configuration.AddEnvironmentVariables(prefix: "GITRISE_");
+        hostBuilder.Configuration.AddCommandLine(Environment.GetCommandLineArgs());
 
         //< finally: return
         return hostBuilder;
