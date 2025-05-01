@@ -20,7 +20,7 @@ public partial class App : Application
         AvaloniaXamlLoader.Load(this);
     }
 
-    public override void OnFrameworkInitializationCompleted()
+    public override async void OnFrameworkInitializationCompleted()
     {
         var hostBuilder = CreateHostBuilder();
         GlobalHost = hostBuilder.Build();
@@ -37,6 +37,8 @@ public partial class App : Application
         }
 
         base.OnFrameworkInitializationCompleted();
+
+        await GlobalHost.StartAsync();
     }
 
     private static HostApplicationBuilder CreateHostBuilder()
