@@ -3,6 +3,7 @@
   <ItemGroup Label="avalonia dependencies">
     <PackageVersion Include="Avalonia" Version="11.2.8" />
     <PackageVersion Include="Avalonia.Desktop" Version="11.2.8" />
+    <PackageVersion Include="Avalonia.Diagnostics" Version="11.2.8" />
   </ItemGroup>
 
 
