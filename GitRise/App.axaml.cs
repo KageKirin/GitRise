@@ -28,6 +28,12 @@ public partial class App : Application
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
             desktop.MainWindow = GlobalHost.Services.GetRequiredService<MainWindow>();
+            desktop.Exit += (sender, args) =>
+            {
+                GlobalHost.StopAsync(TimeSpan.FromSeconds(5)).GetAwaiter().GetResult();
+                GlobalHost.Dispose();
+                GlobalHost = null;
+            };
         }
 
         base.OnFrameworkInitializationCompleted();
