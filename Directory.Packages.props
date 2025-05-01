@@ -1,5 +1,9 @@
 <Project>
 
+  <ItemGroup Label="avalonia dependencies">
+    <PackageVersion Include="Avalonia" Version="11.2.8" />
+  </ItemGroup>
+
 
   <ItemGroup Label="global package references">
     <!-- enable reproducible builds -->
