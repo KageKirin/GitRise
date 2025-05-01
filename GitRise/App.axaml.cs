@@ -16,11 +16,24 @@ public partial class App : Application
 
     public override void OnFrameworkInitializationCompleted()
     {
+        var hostBuilder = CreateHostBuilder();
+        GlobalHost = hostBuilder.Build();
+
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
             desktop.MainWindow = new MainWindow();
         }
 
         base.OnFrameworkInitializationCompleted();
+    }
+
+    private static HostApplicationBuilder CreateHostBuilder()
+    {
+        //< below: create HostApplicationBuilder instance
+        // alternative: use Host.CreateDefaultBuilder
+        var hostBuilder = Host.CreateApplicationBuilder(Environment.GetCommandLineArgs());
+
+        //< finally: return
+        return hostBuilder;
     }
 }
