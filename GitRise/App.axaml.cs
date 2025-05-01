@@ -3,6 +3,7 @@ using System.IO;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using KageKirin.Extensions.Configuration.GitConfig;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
@@ -49,6 +50,7 @@ public partial class App : Application
             optional: true,
             reloadOnChange: true
         );
+        hostBuilder.Configuration.AddGitConfig(path: Environment.CurrentDirectory, optional: false, reloadOnChange: true);
 
         //< finally: return
         return hostBuilder;
