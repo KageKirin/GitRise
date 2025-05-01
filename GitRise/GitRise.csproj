@@ -26,5 +26,6 @@
     <PackageReference Include="Microsoft.Extensions.Logging" />
 
     <PackageReference Include="Alexinea.Extensions.Configuration.Toml" />
+    <PackageReference Include="KageKirin.Extensions.Configuration.GitConfig"/>
   </ItemGroup>
 </Project>

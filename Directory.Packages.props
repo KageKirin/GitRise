@@ -9,6 +9,7 @@
     <PackageVersion Include="Microsoft.Extensions.Logging" Version="9.0.4" />
     <PackageVersion Include="Microsoft.Extensions.Logging.Debug" Version="9.0.4" />
     <PackageVersion Include="Alexinea.Extensions.Configuration.Toml" Version="7.0.0" />
+    <PackageVersion Include="KageKirin.Extensions.Configuration.GitConfig" Version="0.1.0" />
   </ItemGroup>
 
   <ItemGroup Label="avalonia dependencies">
