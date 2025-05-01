@@ -1,2 +1,7 @@
 <Project>
+  <Target Name="GenerateChangelog" BeforeTargets="Pack">
+    <Message Importance="high" Text="Generating CHANGELOG.md" />
+    <Exec Command="git log --reverse --pretty='* %s' > $(MSBuildThisFileDirectory)CHANGELOG.md"/>
+    <Exec Command="cat $(MSBuildThisFileDirectory)CHANGELOG.md"/>
+  </Target>
 </Project>
