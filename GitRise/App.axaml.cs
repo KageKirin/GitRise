@@ -59,6 +59,7 @@ public partial class App : Application
         hostBuilder.Logging.AddConfiguration(hostBuilder.Configuration.GetSection("Logging"));
         hostBuilder.Logging.AddConsole(); //< add console as logging target
         hostBuilder.Logging.AddDebug(); //< add debug output as logging target
+        hostBuilder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace); //< set minimum level to trace in Debug
 
         //< finally: return
         return hostBuilder;
