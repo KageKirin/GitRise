@@ -1,5 +1,7 @@
 # Git Rise (prototype)
 
+![Icon.png](Metro map style icon)
+
 GitRise is currently a prototype for a visual Git client,
 targeting macOS, Linux and Windows.
 
