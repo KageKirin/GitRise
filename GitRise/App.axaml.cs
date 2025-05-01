@@ -1,6 +1,9 @@
+using System;
+using System.IO;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
 namespace GitRise;
@@ -32,6 +35,20 @@ public partial class App : Application
         //< below: create HostApplicationBuilder instance
         // alternative: use Host.CreateDefaultBuilder
         var hostBuilder = Host.CreateApplicationBuilder(Environment.GetCommandLineArgs());
+
+        //< below: configure where the Host configuration comes from
+        hostBuilder.Configuration.Sources.Clear();
+        hostBuilder.Configuration.SetBasePath(Environment.CurrentDirectory);
+        hostBuilder.Configuration.AddTomlFile(
+            Path.Join(AppDomain.CurrentDomain.BaseDirectory, "gitrise.toml"),
+            optional: true,
+            reloadOnChange: true
+        );
+        hostBuilder.Configuration.AddTomlFile(
+            Path.Join(Environment.CurrentDirectory, "gitrise.toml"),
+            optional: true,
+            reloadOnChange: true
+        );
 
         //< finally: return
         return hostBuilder;
