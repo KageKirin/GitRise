@@ -6,6 +6,7 @@ using Avalonia.Markup.Xaml;
 using KageKirin.Extensions.Configuration.GitConfig;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace GitRise;
 
@@ -53,6 +54,9 @@ public partial class App : Application
         hostBuilder.Configuration.AddGitConfig(path: Environment.CurrentDirectory, optional: false, reloadOnChange: true);
         hostBuilder.Configuration.AddEnvironmentVariables(prefix: "GITRISE_");
         hostBuilder.Configuration.AddCommandLine(Environment.GetCommandLineArgs());
+
+        //< below: configure how the Host should handle logging
+        hostBuilder.Logging.AddConfiguration(hostBuilder.Configuration.GetSection("Logging"));
 
         //< finally: return
         return hostBuilder;
