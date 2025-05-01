@@ -57,6 +57,7 @@ public partial class App : Application
 
         //< below: configure how the Host should handle logging
         hostBuilder.Logging.AddConfiguration(hostBuilder.Configuration.GetSection("Logging"));
+        hostBuilder.Logging.AddConsole(); //< add console as logging target
 
         //< finally: return
         return hostBuilder;
