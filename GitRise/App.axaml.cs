@@ -51,6 +51,7 @@ public partial class App : Application
             reloadOnChange: true
         );
         hostBuilder.Configuration.AddGitConfig(path: Environment.CurrentDirectory, optional: false, reloadOnChange: true);
+        hostBuilder.Configuration.AddEnvironmentVariables(prefix: "GITRISE_");
 
         //< finally: return
         return hostBuilder;
