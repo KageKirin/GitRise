@@ -19,6 +19,7 @@
     <PackageVersion Include="Avalonia.Themes.Fluent" Version="11.2.8" />
     <PackageVersion Include="Avalonia.Fonts.Inter" Version="11.2.8" />
     <PackageVersion Include="Avalonia.ReactiveUI" Version="11.2.8" />
+    <PackageVersion Include="Avalonia.Controls.DataGrid" Version="11.2.8" />
   </ItemGroup>
 
 

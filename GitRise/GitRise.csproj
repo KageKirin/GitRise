@@ -19,6 +19,8 @@
       <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Avalonia.ReactiveUI"/>
+    <!-- controls packages -->
+    <PackageReference Include="Avalonia.Controls.DataGrid"/>
 
     <PackageReference Include="Microsoft.Extensions.Hosting"/>
     <PackageReference Include="Microsoft.Extensions.Configuration" />
