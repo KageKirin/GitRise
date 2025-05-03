@@ -10,5 +10,8 @@
         x:DataType="vm:MainWindowViewModel"
 
         Title="GitRise">
-    Welcome to Avalonia!
+  <StackPanel>
+    <DataGrid AutoGenerateColumns="True" ItemsSource="{CompiledBinding Commits}" />
+  </StackPanel>
+
 </Window>
