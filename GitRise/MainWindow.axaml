@@ -9,7 +9,9 @@
         x:Class="GitRise.MainWindow"
         x:DataType="vm:MainWindowViewModel"
 
-        Title="GitRise">
+        Title="GitRise"
+        Icon="avares://GitRise/Resources/GitRise.ico"
+        >
   <StackPanel>
     <DataGrid AutoGenerateColumns="True" ItemsSource="{CompiledBinding Commits}" />
   </StackPanel>
