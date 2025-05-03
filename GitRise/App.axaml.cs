@@ -71,6 +71,7 @@ public partial class App : Application
         hostBuilder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace); //< set minimum level to trace in Debug
 
         //< below: register services to be available in Host
+        hostBuilder.Services.AddTransient<MainWindowViewModel>();
         hostBuilder.Services.AddTransient<MainWindow>();
 
         //< finally: return
