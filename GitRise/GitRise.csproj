@@ -33,6 +33,10 @@
     <PackageReference Include="KageKirin.Extensions.Configuration.GitConfig"/>
   </ItemGroup>
 
+  <ItemGroup>
+    <AvaloniaResource Include="Resources\**"/>
+  </ItemGroup>
+
   <ItemGroup Label="bundled resources">
     <Content Include="$(MSBuildThisFileDirectory)Resources\GitRise.ico" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="Resources" />
   </ItemGroup>
