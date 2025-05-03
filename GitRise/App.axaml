@@ -4,6 +4,12 @@
              RequestedThemeVariant="Default">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
+    <TrayIcon.Icons>
+        <TrayIcons>
+            <TrayIcon Icon="avares://GitRise/Resources/GitRise.ico" ToolTipText="GitRise" />
+        </TrayIcons>
+    </TrayIcon.Icons>
+
     <Application.Styles>
         <FluentTheme />
         <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml" />
