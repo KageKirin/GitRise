@@ -43,7 +43,7 @@
     <Copyright>Copyright © $(Owners) $([System.DateTime]::Now.Year)</Copyright>
     <Authors>Christian Helmich</Authors>
     <Owners>$(Authors);$(Company)</Owners>
-    <Company>DeNA Co.,Ltd.</Company>
+    <Company>KageKirin</Company>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>CHANGELOG.md</PackageReleaseNotes>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
